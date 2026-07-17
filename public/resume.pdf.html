@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Saurabh Kumar - MERN Stack Developer Resume">
+<meta name="author" content="Saurabh Kumar">
+<title>Saurabh Kumar - MERN Stack Developer Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0f1a2b;
+    --navy-light: #1a2a3a;
+    --accent: #5b9bd5;
+    --white: #ffffff;
+    --text-dark: #2d2d2d;
+    --text-muted: #5a6472;
+    --border-light: #e2e6ea;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: #eef1f4;
+  }
+
+  .resume-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+    min-height: 1120px;
+  }
+
+  /* ===== LEFT COLUMN ===== */
+  .sidebar {
+    width: 35%;
+    background: var(--navy);
+    color: var(--white);
+    padding: 40px 28px;
+  }
+
+  .sidebar section {
+    margin-bottom: 32px;
+  }
+
+  .sidebar h2 {
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+  }
+
+  .contact-list {
+    list-style: none;
+  }
+
+  .contact-list li {
+    font-size: 12.5px;
+    margin-bottom: 10px;
+    word-break: break-word;
+    color: #dbe4ee;
+  }
+
+  .contact-list li a {
+    color: #dbe4ee;
+    text-decoration: none;
+  }
+
+  .contact-label {
+    font-weight: 600;
+    color: var(--white);
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  .about-text {
+    font-size: 12.5px;
+    color: #c9d4e0;
+    line-height: 1.65;
+    text-align: justify;
+  }
+
+  .edu-block h3 {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .edu-block p {
+    font-size: 12px;
+    color: #c9d4e0;
+    margin-bottom: 2px;
+  }
+
+  .skill-category {
+    margin-bottom: 10px;
+  }
+
+  .skill-category h4 {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 3px;
+  }
+
+  .skill-category p {
+    font-size: 12px;
+    color: #c9d4e0;
+  }
+
+  .soft-skills-list, .sidebar ul.plain {
+    list-style: none;
+  }
+
+  .soft-skills-list li {
+    font-size: 12.5px;
+    color: #c9d4e0;
+    margin-bottom: 8px;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .soft-skills-list li::before {
+    content: "\2022";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+  }
+
+  .references-text {
+    font-size: 12.5px;
+    color: #c9d4e0;
+    font-style: italic;
+  }
+
+  /* ===== RIGHT COLUMN ===== */
+  .main-content {
+    width: 65%;
+    background: var(--white);
+    padding: 40px 40px;
+  }
+
+  .header-block {
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 3px solid var(--navy);
+  }
+
+  .header-block h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--navy);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+  }
+
+  .header-block .title {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  .main-content section {
+    margin-bottom: 30px;
+  }
+
+  .main-content h2 {
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--navy);
+    border-bottom: 2px solid var(--border-light);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+
+  .project {
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--border-light);
+  }
+
+  .project:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .project-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 3px;
+  }
+
+  .project-stack {
+    font-size: 12px;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .project ul {
+    list-style: none;
+    margin-bottom: 8px;
+  }
+
+  .project ul li {
+    font-size: 12.5px;
+    margin-bottom: 5px;
+    padding-left: 16px;
+    position: relative;
+    color: var(--text-dark);
+  }
+
+  .project ul li::before {
+    content: "\2013";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .project-links {
+    font-size: 12px;
+  }
+
+  .project-links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 16px;
+  }
+
+  .project-links a:hover {
+    text-decoration: underline;
+  }
+
+  .cert-list {
+    list-style: none;
+  }
+
+  .cert-list li {
+    font-size: 13px;
+    margin-bottom: 10px;
+    padding-left: 18px;
+    position: relative;
+    color: var(--text-dark);
+  }
+
+  .cert-list li::before {
+    content: "\2022";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .cert-issuer {
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .resume-container {
+      flex-direction: column;
+      margin: 0;
+      box-shadow: none;
+    }
+
+    .sidebar, .main-content {
+      width: 100%;
+      padding: 28px 22px;
+    }
+
+    .header-block h1 {
+      font-size: 28px;
+    }
+  }
+
+  /* ===== PRINT ===== */
+  @media print {
+    body {
+      background: var(--white);
+      margin: 0;
+    }
+
+    .resume-container {
+      display: flex;
+      max-width: 100%;
+      margin: 0;
+      box-shadow: none;
+      min-height: auto;
+    }
+
+    .sidebar {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      background: var(--navy) !important;
+      color: var(--white) !important;
+    }
+
+    .main-content {
+      padding: 24px 30px;
+    }
+
+    a {
+      color: inherit !important;
+    }
+
+    .project, .header-block {
+      page-break-inside: avoid;
+    }
+
+    @page {
+      margin: 0.4in;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="resume-container">
+
+  <!-- LEFT COLUMN -->
+  <aside class="sidebar">
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li><span class="contact-label">Phone:</span>+91 8475959765</li>
+        <li><span class="contact-label">Email:</span>soravvkumar32@gmail.com</li>
+        <li><span class="contact-label">Location:</span>Meerut, Uttar Pradesh, India</li>
+        <li><span class="contact-label">LinkedIn:</span><a href="https://www.linkedin.com/in/saurabh-kumar-932172355/" target="_blank" rel="noopener">linkedin.com/in/saurabh-kumar-932172355</a></li>
+        <li><span class="contact-label">GitHub:</span><a href="https://github.com/soravv-dev" target="_blank" rel="noopener">github.com/soravv-dev</a></li>
+      </ul>
+    </section>
+
+    <section id="about-me">
+      <h2>About Me</h2>
+      <p class="about-text">Passionate MERN Stack Developer with hands-on experience building modern, responsive web applications using React.js, Node.js, Express.js, and MongoDB. Currently expanding expertise into Artificial Intelligence and Machine Learning — actively learning AI/ML concepts, LLMs, and their integration with web applications. Strong problem-solving skills, attention to detail, and a commitment to writing clean, efficient code. Eager to contribute to innovative projects and grow as a full-stack + AI engineer.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-block">
+        <h3>Diploma in Computer Science &amp; Engineering</h3>
+        <p>Meerut, Uttar Pradesh, India</p>
+        <p>2024 - 2026</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <div class="skill-category">
+        <h4>Languages</h4>
+        <p>HTML5, CSS3, JavaScript (ES6+), Python</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Frontend</h4>
+        <p>React.js, Tailwind CSS, Responsive Design</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Backend</h4>
+        <p>Node.js, Express.js</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Database</h4>
+        <p>MongoDB, MySQL (basics)</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>Tools</h4>
+        <p>Git, GitHub, VS Code, Postman, Vite</p>
+      </div>
+
+      <div class="skill-category">
+        <h4>AI/ML (Learning)</h4>
+        <p>LLMs, OpenAI API, LangChain</p>
+      </div>
+    </section>
+
+    <section id="soft-skills">
+      <h2>Soft Skills</h2>
+      <ul class="soft-skills-list">
+        <li>Communication &amp; Collaboration</li>
+        <li>Problem Solving &amp; Critical Thinking</li>
+        <li>Teamwork &amp; Adaptability</li>
+        <li>Time Management &amp; Attention to Detail</li>
+        <li>Quick Learner</li>
+      </ul>
+    </section>
+
+    <section id="references">
+      <h2>References</h2>
+      <p class="references-text">Available upon request</p>
+    </section>
+
+  </aside>
+
+  <!-- RIGHT COLUMN -->
+  <main class="main-content">
+
+    <header class="header-block">
+      <h1>Saurabh Kumar</h1>
+      <p class="title">MERN Stack Developer | AI Enthusiast</p>
+    </header>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3 class="project-title">AI Resume Analyzer</h3>
+        <p class="project-stack">React 19, Vite, Tailwind CSS, Framer Motion, React Router DOM</p>
+        <ul>
+          <li>Premium glassmorphism UI with dark theme and fully responsive design</li>
+          <li>Drag-and-drop resume upload with instant preview</li>
+          <li>ATS score dashboard with circular progress indicator</li>
+          <li>Skills analysis identifying strengths and missing keywords</li>
+          <li>Intelligent resume improvement suggestions</li>
+          <li>Smooth Framer Motion animations</li>
+        </ul>
+        <p class="project-links">
+          <a href="https://github.com/soravv-dev/AI-resume-analyzer" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://ai-resume-analyzer-one-roan.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+        </p>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">React Job Portal</h3>
+        <p class="project-stack">React.js, Vite, Tailwind CSS, Framer Motion, React Router DOM</p>
+        <ul>
+          <li>Modern job portal with featured and latest jobs sections</li>
+          <li>Real-time job search with filtering</li>
+          <li>Detailed job description pages with React Router</li>
+          <li>Glassmorphism UI with smooth animations</li>
+          <li>Fully responsive and mobile-friendly</li>
+          <li>Reusable component architecture</li>
+        </ul>
+        <p class="project-links">
+          <a href="https://github.com/soravv-dev/react-job-portal" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://react-job-portal-bwu2.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+        </p>
+      </div>
+
+      <div class="project">
+        <h3 class="project-title">LuxeCart – Premium E-Commerce Frontend</h3>
+        <p class="project-stack">React 19, Vite, Tailwind CSS, Framer Motion, React Router DOM</p>
+        <ul>
+          <li>Premium luxury e-commerce UI with dark theme</li>
+          <li>Product categories and featured products display</li>
+          <li>Interactive product cards with shopping cart UI</li>
+          <li>Product detail pages with smooth transitions</li>
+          <li>Modern glassmorphism effects</li>
+          <li>Clean folder structure with reusable components</li>
+        </ul>
+        <p class="project-links">
+          <a href="https://github.com/soravv-dev/LuxeCart-eccomerce-full-page" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://luxe-cart-eccomerce-full-page.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
+        </p>
+      </div>
+
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul class="cert-list">
+        <li>Stay Ahead of the AI Curve <span class="cert-issuer">- Google (Coursera), July 2026</span></li>
+        <li>Get Started with AI in Azure <span class="cert-issuer">- Microsoft, July 2026</span></li>
+        <li>AI Literacy <span class="cert-issuer">- IBM SkillsBuild, July 2026</span></li>
+        <li>Responsive Web Design <span class="cert-issuer">- freeCodeCamp, May 2025 (300 hours)</span></li>
+        <li>JavaScript Developer Certification <span class="cert-issuer">- freeCodeCamp, April 2026 (300 hours)</span></li>
+        <li>Python Developer Certification <span class="cert-issuer">- freeCodeCamp, April 2026 (300 hours)</span></li>
+        <li>ML for Beginners <span class="cert-issuer">- Sololearn, May 2025</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+</div>
+
+</body>
+</html>
